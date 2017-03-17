@@ -1,0 +1,6 @@
+---
+- hosts: testdroplets
+  roles:
+    - update
+    - bootstrap_server
+    - create_new_user

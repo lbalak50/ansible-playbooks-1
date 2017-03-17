@@ -1,0 +1,16 @@
+---
+- name: Install necessary packages
+  apt: 
+    name: '{{ item }}'
+    state: latest
+  with_items:
+  - git
+  - htop
+  - tree
+  - vim
+
+- name: Enable a basic firewall
+  become: yes
+  shell: |
+    ufw allow OpenSSH
+    ufw enable
