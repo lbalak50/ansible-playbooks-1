@@ -3,4 +3,7 @@
   roles:
     - update
     - bootstrap_server
-    - create_new_user
+    - role: create_new_user
+      username: tasdik
+    - role: vimserver
+      username: tasdik
