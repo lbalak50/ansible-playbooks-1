@@ -1,9 +1,7 @@
 ---
 - hosts: testdroplets
   roles:
-    - update
-    - bootstrap_server
-    - role: create_new_user
-      username: tasdik
-    - role: vimserver
-      username: tasdik
+    - {role: update}
+    - {role: bootstrap_server}
+    - {role: create_new_user}
+    - {role: vimserver}
