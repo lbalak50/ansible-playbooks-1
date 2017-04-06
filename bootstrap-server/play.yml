@@ -2,6 +2,7 @@
 - hosts: testdroplets
   roles:
     - {role: update}
-    - {role: bootstrap_server}
+    - {role: install_minimal_packages}
     - {role: create_new_user}
+    - {role: basic_server_hardening}
     - {role: vimserver}

@@ -19,3 +19,10 @@
     mode: 0600
     owner: "{{ username }}"
     group: "{{ username }}"
+
+- name: Add user to sudoers list
+  lineinfile:
+    dest: /etc/sudoers
+    regexp: "{{ username }} ALL"
+    line: "{{ username }} ALL=(ALL) ALL"
+    state: present

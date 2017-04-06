@@ -8,9 +8,3 @@
   - htop
   - tree
   - vim
-
-- name: Enable a basic firewall
-  become: yes
-  shell: |
-    ufw allow OpenSSH
-    ufw enable
